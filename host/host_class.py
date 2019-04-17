@@ -14,7 +14,7 @@ class Class(object):
         data["args"] = list(args)
         data["kwargs"] = kwargs
 
-        url = "http://" + self.__host + ":" + self.__port + "/"
+        url = "http://%s:%s/" % (self.__host, self.__port)
 
         resp = requests.post(url, json=data)
 
